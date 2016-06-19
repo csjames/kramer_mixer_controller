@@ -1,9 +1,8 @@
 package models
 
 type Port struct {
-  Id      int
-  Volume  int
+  Id      int         
+  Volume  int         // not current used :) 
   Name    string
-  Owner   string
   Enabled bool
 }
