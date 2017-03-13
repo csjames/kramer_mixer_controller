@@ -10,8 +10,8 @@
 
 namespace WindowsFormsApplication2.Properties {
     using System;
-    
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +23,15 @@ namespace WindowsFormsApplication2.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -45,7 +45,7 @@ namespace WindowsFormsApplication2.Properties {
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -59,15 +59,15 @@ namespace WindowsFormsApplication2.Properties {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon notifyIcon {
-            get {
-                object obj = ResourceManager.GetObject("notifyIcon", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
+        // internal static System.Drawing.Icon notifyIcon {
+        //     get {
+        //         object obj = ResourceManager.GetObject("notifyIcon", resourceCulture);
+        //         return ((System.Drawing.Icon)(obj));
+        //     }
+        // }
     }
 }

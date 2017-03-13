@@ -51,9 +51,9 @@ namespace WindowsFormsApplication2
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            
 
-            client.BaseAddress = new Uri("http://10.0.10.1:9000/");
+
+            client.BaseAddress = new Uri("http://10.0.10.100:9000/");
 
             inputButtons[0] = input1;
             inputButtons[1] = input2;
@@ -136,28 +136,28 @@ namespace WindowsFormsApplication2
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Minimized)
-            {
-                minimize();
-            }
+            // if (this.WindowState == FormWindowState.Minimized)
+            // {
+            //     // minimize();
+            // }
         }
 
-        private void minimize()
-        {
-            Console.WriteLine("Minimizing");
-            notifyIcon1.Visible = true;
-            //notifyIcon1.ShowBalloonTip(3000);
-            this.ShowInTaskbar = false;
-            this.Hide();
-        }
+        // private void minimize()
+        // {
+        //     Console.WriteLine("Minimizing");
+        //     // notifyIcon1.Visible = true;
+        //     //notifyIcon1.ShowBalloonTip(3000);
+        //     this.ShowInTaskbar = false;
+        //     this.Hide();
+        // }
 
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            this.Show();
-            this.WindowState = FormWindowState.Normal;
-            this.ShowInTaskbar = true;
-            notifyIcon1.Visible = false;
-        }
+        // private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        // {
+        //     this.Show();
+        //     this.WindowState = FormWindowState.Normal;
+        //     this.ShowInTaskbar = true;
+        //     notifyIcon1.Visible = false;
+        // }
 
 
         private void mute_Click(object sender, EventArgs e)
@@ -196,7 +196,7 @@ namespace WindowsFormsApplication2
                 Console.WriteLine("Mapped " + x + " to " + y);
                 int argb = Int32.Parse(colorArray[x-1].Replace("#", "FF"), System.Globalization.NumberStyles.HexNumber);
                 outputButtons[y-1].BackColor = Color.FromArgb(argb);
-                if(!pinned.Checked) minimize();
+                // if(!pinned.Checked) minimize();
             } else
             {
                 MessageBox.Show("Fail", "Error Title", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
